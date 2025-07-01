@@ -96,6 +96,9 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-blue-950 text-white p-6 flex flex-col gap-8 relative">
+      <div className="flex justify-center text-center items-center text-4xl font-bold">
+        <h1>Nodesure Technologies Pvt. Ltd.</h1>
+      </div>
       {loading && (
         <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center z-50">
           <Loader />
