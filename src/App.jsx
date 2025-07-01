@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import Loader from "./Loader";
+import Button from "./Button";
 
 const App = () => {
   const [cityInput, setCityInput] = useState("");
@@ -110,12 +111,7 @@ const App = () => {
           placeholder="Enter city name"
           className="px-4 py-2 rounded-md text-white border-1"
         />
-        <button
-          type="submit"
-          className="bg-blue-700 hover:bg-blue-600 px-4 py-2 rounded-md cursor-pointer"
-        >
-          Get Weather
-        </button>
+        <Button />
       </form>
 
       <div className="max-w-6xl mx-auto w-full">
