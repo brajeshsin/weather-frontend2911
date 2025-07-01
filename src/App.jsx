@@ -10,6 +10,9 @@ import {
 } from "recharts";
 import Loader from "./Loader";
 import Button from "./Button";
+import { FaDownload } from "react-icons/fa";
+import { MdAutoGraph } from "react-icons/md";
+import { CgMediaLive } from "react-icons/cg";
 
 const App = () => {
   const [cityInput, setCityInput] = useState("");
@@ -153,7 +156,10 @@ const App = () => {
 
       <div className="max-w-6xl mx-auto w-full">
         <div className="bg-blue-950 bg-opacity-60 backdrop-blur-md rounded-xl p-6 border border-blue-600 shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">🗓️ Live Forecast</h2>
+          <div className="flex text-2xl font-bold mb-4 gap-2">
+            <CgMediaLive />
+            <h1>Live Forecast</h1>
+          </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
             {current.forecast.map((f, i) => (
               <div
@@ -171,9 +177,10 @@ const App = () => {
 
       <div className="max-w-6xl mx-auto w-full">
         <div className="bg-blue-950 bg-opacity-60 backdrop-blur-md rounded-xl p-6 border border-blue-600 shadow-lg">
-          <h2 className="text-2xl font-bold mb-4 text-white">
-            📊 7-Day Forecast Graph
-          </h2>
+          <div className="flex text-2xl font-bold mb-4 gap-2">
+            <MdAutoGraph />
+            <h1>7-Day Forecast Graph</h1>
+          </div>
           <div className="w-full h-64 bg-blue-950 bg-opacity-60 rounded-lg px-2">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart
@@ -203,12 +210,13 @@ const App = () => {
           </div>
         </div>
       </div>
-
+      {/* //  <div className="text-2xl font-bold mb-4"></div> */}
       <div className="max-w-6xl mx-auto w-full">
         <div className="bg-blue-950 bg-opacity-60 backdrop-blur-md rounded-xl p-6 border border-blue-600 shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">
-            📥 Download Weather Report
-          </h2>
+          <div className="flex text-2xl font-bold mb-4 gap-2">
+            <FaDownload />
+            <h1>Download Weather Report</h1>
+          </div>
           <div className="flex flex-wrap gap-4">
             {current.historyOptions.map((opt, i) => (
               <button
